@@ -33,13 +33,13 @@ export class TestComponent implements OnInit {
 
 
   testAdmin() {
-    this.testService.testAdmin().then(reply => {
+    this.testService.testAdmin().subscribe(reply => {
       console.log(reply);
     });
   }
 
   testModerator() {
-    this.testService.testModerator().then(reply => {
+    this.testService.testModerator().subscribe(reply => {
       console.log(reply);
     });
   }
