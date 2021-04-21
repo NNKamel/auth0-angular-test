@@ -25,4 +25,12 @@ export class TestService {
   testApi2() {
     return this.http.get<any>(`${this.baseUrl2}`, this.httpOptions).toPromise();
   }
+
+  testModerator() {
+    return this.http.get<any>(`${this.baseUrl}/isadmin`, this.httpOptions).toPromise();
+  }
+
+  testAdmin() {
+    return this.http.get<any>(`${this.baseUrl}/ismoderator`, this.httpOptions).toPromise();
+  }
 }

@@ -32,6 +32,19 @@ export class TestComponent implements OnInit {
   }
 
 
+  testAdmin() {
+    this.testService.testAdmin().then(reply => {
+      console.log(reply);
+    });
+  }
+
+  testModerator() {
+    this.testService.testModerator().then(reply => {
+      console.log(reply);
+    });
+  }
+
+
   testAPI2() {
     this.testService.testApi2().then(reply => {
       console.log("in test 2");
