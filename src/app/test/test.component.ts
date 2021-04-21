@@ -16,11 +16,25 @@ export class TestComponent implements OnInit {
   }
 
   testLogin() {
+    console.log("testing login");
     this.auth.login();
+  }
+
+  testLogout() {
+    console.log("object");
+    this.auth.logout();
   }
 
   testAPI() {
     this.testService.testApi().then(reply => {
+      console.log(reply);
+    });
+  }
+
+
+  testAPI2() {
+    this.testService.testApi2().then(reply => {
+      console.log("in test 2");
       console.log(reply);
     });
   }

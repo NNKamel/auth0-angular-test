@@ -25,11 +25,11 @@ export class AuthService {
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
-      domain: 'dev-yktazjo3.us.auth0.com', // the account
-      client_id: 'DEJH5xmVrKbgDEwq5XmgjZqyftJLGrs5', // an application
+      domain: 'cinephiliacs.us.auth0.com', // the account
+      client_id: 'uDzm9BWSa0J3ePufHnwOjxzKWO2hpW5P', // an application
       // redirect_uri: this.urlService.angularBaseUrl,
       redirect_uri: "http://localhost:4200/",
-      audience: 'https://inthekitchen/' // an API
+      audience: 'https://cinephiliacs-api/' // an API
       // audience: 'https://localhost:5001'
     })
   ) as Observable<Auth0Client>).pipe(
@@ -271,7 +271,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
-        client_id: 'DEJH5xmVrKbgDEwq5XmgjZqyftJLGrs5',
+        client_id: 'uDzm9BWSa0J3ePufHnwOjxzKWO2hpW5P',
         returnTo: `${window.location.origin}`
       });
       // this.loading = false;
