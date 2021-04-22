@@ -33,13 +33,13 @@ export class TestComponent implements OnInit {
 
 
   testAdmin() {
-    this.testService.testAdmin().subscribe(reply => {
+    this.testService.testAdmin().then(reply => {
       console.log(reply);
     });
   }
 
   testModerator() {
-    this.testService.testModerator().subscribe(reply => {
+    this.testService.testModerator().then(reply => {
       console.log(reply);
     });
   }
@@ -47,6 +47,13 @@ export class TestComponent implements OnInit {
 
   testAPI2() {
     this.testService.testApi2().then(reply => {
+      console.log("in test 2");
+      console.log(reply);
+    });
+  }
+
+  testLoggedOut() {
+    this.testService.testloggedout().then(reply => {
       console.log("in test 2");
       console.log(reply);
     });

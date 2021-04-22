@@ -27,10 +27,14 @@ export class TestService {
   }
 
   testModerator() {
-    return this.http.get<any>(`${this.baseUrl2}/ismoderator`, this.httpOptions);
+    return this.http.get<any>(`${this.baseUrl2}/ismoderator`, this.httpOptions).toPromise();
   }
 
   testAdmin() {
-    return this.http.get<any>(`${this.baseUrl2}/isadmin`, this.httpOptions);
+    return this.http.get<any>(`${this.baseUrl2}/isadmin`, this.httpOptions).toPromise();
+  }
+
+  testloggedout() {
+    return this.http.get<any>(`${this.baseUrl2}/loggedout`, this.httpOptions).toPromise();
   }
 }
