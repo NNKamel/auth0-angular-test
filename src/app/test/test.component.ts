@@ -54,7 +54,24 @@ export class TestComponent implements OnInit {
 
   testLoggedOut() {
     this.testService.testloggedout().then(reply => {
-      console.log("in test 2");
+      console.log(reply);
+    });
+  }
+
+  testGetData() {
+    this.testService.testGetData().then(reply => {
+      console.log(reply);
+    });
+  }
+
+  testAddAdmin() {
+    this.testService.testAddAdmin().then(reply => {
+      console.log(reply);
+    });
+  }
+
+  testRemoveAdmin() {
+    this.testService.testRemoveAdmin().then(reply => {
       console.log(reply);
     });
   }

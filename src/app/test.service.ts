@@ -37,4 +37,16 @@ export class TestService {
   testloggedout() {
     return this.http.get<any>(`${this.baseUrl2}/loggedout`, this.httpOptions).toPromise();
   }
+
+  testGetData() {
+    return this.http.get<any>(`${this.baseUrl2}/userdata`, this.httpOptions).toPromise();
+  }
+
+  testAddAdmin() {
+    return this.http.get<any>(`${this.baseUrl2}/addadmin`, this.httpOptions).toPromise();
+  }
+
+  testRemoveAdmin() {
+    return this.http.get<any>(`${this.baseUrl2}/removeadmin`, this.httpOptions).toPromise();
+  }
 }
